@@ -1,0 +1,80 @@
+<section>
+    <h1>Invoice</h1>
+    <p>This document is the official invoice for entries from {{university}} for NUDC 2019.</p>
+    <h2>How To Pay</h2>
+    <div class="boxes">
+        <div class="box">
+            <header>
+                <h1>By Bank Transfer</h1>
+            </header>
+            <section>
+                <p>Please transfer by BACS to:
+                    <blockquote>
+                        Inter Varsity Dance Association<br />
+                        Account Number: 32659840<br />
+                        Sort Code: 40-35-34
+                    </blockquote>
+                    with the payment reference "{{reference}}"
+                </p>
+            </section>
+        </div>
+        <div class="box">
+            <header>
+                <h1>By Cash or Cheque</h1>
+            </header>
+            <section>
+                <p>Please bring this with you on the day, with cheques made payable to 'Inter Varsity Dance
+                    Association'</p>
+            </section>
+        </div>
+    </div>
+    <h2>Summary of Entry</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Number</th>
+                <th>Unit Cost</th>
+                <th>Total Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#type-row summary}}<tr>
+                <td>{{type}}</td>
+                <td>{{number}}</td>
+                <td>{{unit_cost}}</td>
+                <td>£{{unit_total}}</td>
+            </tr>{{/type-row}}
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>£{{total_entry}}</td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+<section>
+    <h2>All Entries</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Entry Type</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#competitor-row competitors}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{entry_type.type}}</td>
+                <td>£{{entry_type.unit_cost}}</td>
+            </tr>
+            {{/competitor-row}}
+        </tbody>
+    </table>
+</section>
