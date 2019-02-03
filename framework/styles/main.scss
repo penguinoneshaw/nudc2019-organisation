@@ -1,9 +1,18 @@
+
 body {
-  --app-primary-color: rebeccapurple;
-  --app-secondary-color: darkgreen;
+  --app-primary-color: #004205;
+  --app-secondary-color: #5c366a;
+  --app-secondary-darker: #2a1930;
   --app-contrast-primary-color: white;
-  font-family: 'Palatino Linotype', 'Palatino', serif;
+  --app-contrast-primary-color: white;
+
+  --body-fonts: 'Roboto', 'Segoe UI', 'Tahoma', 'Geneva', Verdana, sans-serif;
+  --header-fonts: 'Roboto Slab', 'Palatino Linotype', 'Palatino', serif;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
+
 
 * {
   box-sizing: border-box

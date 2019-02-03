@@ -4,10 +4,6 @@ import {
     html
 } from 'lit-element';
 
-import {
-    DancesportFrame
-} from '..';
-
 export class DancesportFrameholder extends LitElement {
     static get styles() {
         return css `
@@ -18,11 +14,27 @@ export class DancesportFrameholder extends LitElement {
     right: 0;
     bottom: 0;
     display: grid;
+    z-index: -2;
     grid-template-areas: "logo logo" "body body" "footer footer";
     grid-template-rows: 80px auto 80px;
     grid-template-columns: 1fr 5fr;
     transition: transform 0.3s ease-in-out;
-    background-color: white
+    background-color: white;
+    font-family: var(--header-fonts);
+    background-color: white;
+  }
+
+  #frames::after {
+        content: '';
+        background: url(logo.svg) no-repeat center center;
+        position: fixed;
+        background-size: 80%;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        opacity: 0.1;
+        z-index: -1;
   }
 
   header {
@@ -34,14 +46,23 @@ export class DancesportFrameholder extends LitElement {
     font-variant: small-caps;
   }
 
+  section {
+      font-family: var(--body-fonts)
+  }
+
   #sidebar {
       border-right: double thick var(--app-primary-color);
       grid-area: sidebar
 
   }
 
+  :host([loading]) {
+      opacity: 0;
+  }
+
   #frames {
-      display: contents
+      display: contents;
+      transition: opacity 0.1s cubic-bezier(0, 0.3,.6,1);
   }
 
   footer {
@@ -51,7 +72,7 @@ export class DancesportFrameholder extends LitElement {
       text-align: center;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
   }
 
   #nextup {
@@ -77,6 +98,12 @@ export class DancesportFrameholder extends LitElement {
             _current_slide: {
                 type: Number
             },
+            _sponsors: {
+                type: Array
+            },
+            _compere: {
+                type: String
+            },
             title: {
                 type: String
             }
@@ -88,10 +115,11 @@ export class DancesportFrameholder extends LitElement {
         this.title = this.title || 'Northern Universities Dance Competition';
         this._slides = [{
             type: 'standard',
-            title: document.title,
-            body: 'Welcome to Edinburgh!'
+
         }];
         this._current_slide = 0;
+
+        this.setAttribute('loading', true);
     }
 
     render() {
@@ -101,21 +129,23 @@ export class DancesportFrameholder extends LitElement {
             </header>
             <div id='frames'>
             ${this._slides.map((slide) => {
-                switch (slide.type) {
-                    case 'round':
-                        return html`<round-frame .title="${this._competitions[slide.competition].category + ' ' + this._competitions[slide.competition].event}"
+        switch (slide.type) {
+        case 'round':
+            return html`<round-frame .title="${this._competitions[slide.competition].category + ' ' + this._competitions[slide.competition].event}"
                         .round="${slide.round}"
                         .heats="${slide.heats}"
                         .recalls=${slide.recalls}
                         .dances=${this._competitions[slide.competition].dances}
                         ></round-frame>`;
-                    default:
-                        return html`<dancesport-frame .title="${slide.title}" .body="${slide.body}"></dancesport-frame>`;
-                };
+        default:
+            return html`<dancesport-frame .title="${slide.title}" .body="${slide.body}"></dancesport-frame>`;
+        }
             })}
             </div>
             <footer>
+                ${this._compere ? html`<div>Compère: ${this._compere}</div>`:'' }
                 <div id="nextup">${this._next_event()}</div>
+                ${this._sponsors ? html`<div>Kindly Sponsored By ${this._sponsors.join(', ')}</div>`:'' }
             </footer>
         `;
     }
@@ -131,16 +161,15 @@ export class DancesportFrameholder extends LitElement {
 
         const nextSlide = this._slides[nextSlideNumber];
         switch (nextSlide.type) {
-            case 'round':
-                return [this._competitions[nextSlide.competition].category, this._competitions[nextSlide.competition].event, Number.isInteger(parseInt(nextSlide.round),10) ? `Round ${nextSlide.round}` : nextSlide.round].join(' ');
-            default:
-                return nextSlide.title;
+        case 'round':
+            return [this._competitions[nextSlide.competition].category, this._competitions[nextSlide.competition].event, Number.isInteger(parseInt(nextSlide.round),10) ? `Round ${nextSlide.round}` : nextSlide.round].join(' ');
+        default:
+            return nextSlide.title;
         }
     }
 
     firstUpdated() {
-        this._current_slide_frame().showSlide();
-
+        
         fetch(
             '/config'
         ).then(
@@ -148,28 +177,31 @@ export class DancesportFrameholder extends LitElement {
         ).then(
             config => {
                 this._competitions = config.competitions;
-                
-                this._slides = [...this._slides, ...config.slides];
+                this._compere = config.compere;
+                this._sponsors = config.sponsors;
+                this._slides = config.slides;
+                this.removeAttribute('loading');
             }
         ).catch(e => console.error(e));
-
+                    
         document.body.addEventListener('keydown', (e) => {
             switch (e.key) {
             case 'ArrowRight':
                 this.nextSlide();
                 break;
-                case 'ArrowLeft':
+            case 'ArrowLeft':
                 this.prevSlide();
                 break;
-                case 'f': 
+            case 'f': 
                 this.requestFullscreen();
             }
         });
         document.body.addEventListener('touchstart', ()=>{
             this.requestFullscreen();
         });
+        this._current_slide_frame().showSlide();
     }
-    
+                
     set slide(slide_address) {
         let slide;
         if (Array.isArray(slide_address)) {

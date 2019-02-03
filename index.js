@@ -10,9 +10,10 @@ const {
     individual, team
 } = require('./data/events');
 
-const config = require('./data/slides.json');
+const config = {...require('./data/slides.json'), "competitions": {...individual, ...team}};
 
-fs.readFile = promisify(fs.promises.readFile);
+console.log(config)
+fs.readFile = fs.promises.readFile;
 let base_template_promise = fs.readFile('handlebars_templates/template.hbs').then(template => hbs.compile(template.toString('utf-8')));
 let invoice_template_promise = fs.readFile('handlebars_templates/invoice.hbs').then(template => hbs.compile(template.toString('utf-8')));
 let invoice_list_template_promise = fs.readFile('handlebars_templates/invoice_list.hbs').then(template => hbs.compile(template.toString('utf-8')));
@@ -34,7 +35,7 @@ render_invoice(form_output) {
 }
 
 async function build_index() {
-    const dir_listing = await promisify(fs.readdir)('entries');
+    const dir_listing = await fs.promises.readdir('entries');
     const universities = await Promise.all(dir_listing.map(entry => fs.readFile(`entries/${entry}/json/full_save.json`))).then(
         entries => entries.map(entry => JSON.parse(entry)).reduce((object, university) => {
             return {
@@ -377,8 +378,8 @@ function combine_full_competition_individual_lists(combined_entries_by_universit
 
 /** PRESENTATIONS */
 
-app.get('/presentation', (req, res) => {
-    const index = await presentationTemplate;
+app.get('/presentation', async (req, res) => {
+    const index = await presentation_template;
     res.header('Content-Type', 'text/html');
     res.send(index(config));
 });
@@ -405,4 +406,4 @@ io.on('connection', (socket) => {
     socket.emit('current-slide', current_slide);
 });
 
-server.listen(8080);
+server.listen(8081);

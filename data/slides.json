@@ -1,39 +1,18 @@
 {
   "event": "Northern Universities Dance Competition",
   "titleslide": "Welcome to Edinburgh! We'll be starting at 10:30am",
-  "competitions": {
-    "bw": {
-      "category": "Beginners'",
-      "event": "Waltz",
-      "dances": ["Waltz"]
-    },
-    "bq": {
-      "category": "Beginners'",
-      "event": "Quickstep",
-      "dances": ["Quickstep"]
-    },
-    "bc": {
-      "category": "Beginners'",
-      "event": "Cha-Cha-Cha",
-      "dances": ["Cha-Cha-Cha"]
-    },
-    "nb": {
-      "category": "Novice",
-      "event": "Ballroom",
-      "dances": ["Waltz", "Quickstep"]
-    },
-    "ab": {
-      "category": "Advanced",
-      "event": "Ballroom",
-      "dances": ["Waltz", "Tango", "Quickstep"]
-    },
-    "team": {
-      "category": "Team",
-      "event": "Match",
-      "dances": ["Waltz", "Quickstep", "Cha-Cha-Cha", "Jive"]
-    }
-  },
+  "sponsors": ["Dancesport Scotland"],
+  "compere": "Andrew Thrower",
+  "scrutineer": "Ray Bulpitt",
+  "music": "Julian SURNAME HERE",
   "slides": [{
+    "type": "standard",
+    "title": "Welcome to Edinburgh!"
+    },{
+    "type": "standard",
+    "title": "Sponsors",
+    "body": "This competition was kindly sponsored by <insert sponsors here>"
+  },{
     "type": "round",
     "competition": "bw",
     "round": 1,
@@ -83,7 +62,7 @@
   },
   {
     "type": "round",
-    "competition": "team",
+    "competition": "match",
     "round": "Qualifier",
     "heats": 3
   }
