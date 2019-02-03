@@ -5,14 +5,26 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "watch": "rollup -wc",
+    "build": "rollup -c"
   },
   "dependencies": {
     "express": "^4.16.4",
     "handlebars": "^4.0.12",
-    "sanitize-filename": "^1.6.1"
+    "sanitize-filename": "^1.6.1",
+    "lit-element": "^2.0.0-rc.5",
+    "normalize.css": "^8.0.1",
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "eslint": "^5.13.0",
+    "node-sass": "^4.11.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-terser": "^4.0.3"
   }
 }

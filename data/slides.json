@@ -1,0 +1,91 @@
+{
+  "event": "Northern Universities Dance Competition",
+  "titleslide": "Welcome to Edinburgh! We'll be starting at 10:30am",
+  "competitions": {
+    "bw": {
+      "category": "Beginners'",
+      "event": "Waltz",
+      "dances": ["Waltz"]
+    },
+    "bq": {
+      "category": "Beginners'",
+      "event": "Quickstep",
+      "dances": ["Quickstep"]
+    },
+    "bc": {
+      "category": "Beginners'",
+      "event": "Cha-Cha-Cha",
+      "dances": ["Cha-Cha-Cha"]
+    },
+    "nb": {
+      "category": "Novice",
+      "event": "Ballroom",
+      "dances": ["Waltz", "Quickstep"]
+    },
+    "ab": {
+      "category": "Advanced",
+      "event": "Ballroom",
+      "dances": ["Waltz", "Tango", "Quickstep"]
+    },
+    "team": {
+      "category": "Team",
+      "event": "Match",
+      "dances": ["Waltz", "Quickstep", "Cha-Cha-Cha", "Jive"]
+    }
+  },
+  "slides": [{
+    "type": "round",
+    "competition": "bw",
+    "round": 1,
+    "heats": 3
+  },
+  {
+    "type": "round",
+    "competition": "bq",
+    "round": 1,
+    "heats": 3
+  },
+  {
+    "type": "round",
+    "competition": "ab",
+    "round": "Final",
+    "heats": 1
+  },
+  {
+    "type": "round",
+    "competition": "bw",
+    "round": 2,
+    "heats": 2
+  },
+  {
+    "type": "round",
+    "competition": "bq",
+    "round": 2,
+    "heats": 2
+  },
+  {
+    "type": "round",
+    "competition": "nb",
+    "round": 1,
+    "heats": 3
+  },
+  {
+    "type": "offbeat",
+    "title": "Offbeat Competition"
+  },
+  {
+    "type": "standard",
+    "title": "Lunch"
+  },
+  {
+    "type": "standard",
+    "title": "Ceilidh & Break"
+  },
+  {
+    "type": "round",
+    "competition": "team",
+    "round": "Qualifier",
+    "heats": 3
+  }
+]
+}

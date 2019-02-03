@@ -5,20 +5,22 @@ const http = require('http');
 const express = require('express');
 const app = express();
 const crypto = require('crypto');
-const {
-    promisify
-} = require('util');
+
 const {
     individual, team
 } = require('./data/events');
 
-fs.readFile = promisify(fs.readFile);
+const config = require('./data/slides.json');
+
+fs.readFile = promisify(fs.promises.readFile);
 let base_template_promise = fs.readFile('handlebars_templates/template.hbs').then(template => hbs.compile(template.toString('utf-8')));
 let invoice_template_promise = fs.readFile('handlebars_templates/invoice.hbs').then(template => hbs.compile(template.toString('utf-8')));
 let invoice_list_template_promise = fs.readFile('handlebars_templates/invoice_list.hbs').then(template => hbs.compile(template.toString('utf-8')));
 let index_promise = fs.readFile('handlebars_templates/index.hbs').then(template => hbs.compile(template.toString('utf-8')));
 let university_index_promise = fs.readFile('handlebars_templates/university_index.hbs').then(template => hbs.compile(template.toString('utf-8')));
 let event_index_promise = fs.readFile('handlebars_templates/event_index.hbs').then(template => hbs.compile(template.toString('utf-8')));
+const presentation_template = fs.readFile('framework/index.hbs').then(template => hbs.compile(template.toString('utf-8')));
+
 
 async function
 render_invoice(form_output) {
@@ -373,6 +375,34 @@ function combine_full_competition_individual_lists(combined_entries_by_universit
     };
 }
 
+/** PRESENTATIONS */
+
+app.get('/presentation', (req, res) => {
+    const index = await presentationTemplate;
+    res.header('Content-Type', 'text/html');
+    res.send(index(config));
+});
+
+app.get('/config', async (req, res) => {
+    res.header('cache', 'private, no-cache');
+    res.header('Content-Type', 'text/json');
+    res.send(config);
+});
+
 app.use(express.static('static'));
 
-http.createServer(app).listen(8081);
+const server = http.createServer(app);
+
+
+const io = require('socket.io')(server);
+
+let current_slide = [0,0];
+io.on('connection', (socket) => {
+    socket.on('slide-changed', (slide)=>{
+        current_slide = slide;
+        socket.broadcast.emit('current-slide', slide);
+    });
+    socket.emit('current-slide', current_slide);
+});
+
+server.listen(8080);
