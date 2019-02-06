@@ -122,33 +122,7 @@ export class DancesportFrameholder extends LitElement {
         this.setAttribute('loading', true);
     }
 
-    render() {
-        return html `
-            <header>
-            <h1>${this.title}</h1>
-            </header>
-            <div id='frames'>
-            ${this._slides.map((slide) => {
-        switch (slide.type) {
-        case 'round':
-            return html`<round-frame .title="${this._competitions[slide.competition].category + ' ' + this._competitions[slide.competition].event}"
-                        .round="${slide.round}"
-                        .heats="${slide.heats}"
-                        .recalls=${slide.recalls}
-                        .dances=${this._competitions[slide.competition].dances}
-                        ></round-frame>`;
-        default:
-            return html`<dancesport-frame .title="${slide.title}" .body="${slide.body}"></dancesport-frame>`;
-        }
-            })}
-            </div>
-            <footer>
-                ${this._compere ? html`<div>Compère: ${this._compere}</div>`:'' }
-                <div id="nextup">${this._next_event()}</div>
-                ${this._sponsors ? html`<div>Kindly Sponsored By ${this._sponsors.join(', ')}</div>`:'' }
-            </footer>
-        `;
-    }
+
 
     _current_slide_frame() {
         return this.shadowRoot.querySelectorAll('#frames > *')[this._current_slide];
@@ -163,6 +137,9 @@ export class DancesportFrameholder extends LitElement {
         switch (nextSlide.type) {
         case 'round':
             return [this._competitions[nextSlide.competition].category, this._competitions[nextSlide.competition].event, Number.isInteger(parseInt(nextSlide.round),10) ? `Round ${nextSlide.round}` : nextSlide.round].join(' ');
+        case 'offbeat':
+            return 'Offbeat - ' + nextSlide.title;
+
         default:
             return nextSlide.title;
         }
@@ -182,7 +159,7 @@ export class DancesportFrameholder extends LitElement {
                 this._slides = config.slides;
                 this.removeAttribute('loading');
             }
-        ).catch(e => console.error(e));
+        ).catch(e => console.error(e)); //eslint-disable-line no-console
                     
         document.body.addEventListener('keydown', (e) => {
             switch (e.key) {
@@ -256,5 +233,35 @@ export class DancesportFrameholder extends LitElement {
             bubbles: true,
             cancelable: true
         }));
+    }
+
+    render() {
+        return html `
+            <header>
+            <h1>${this.title}</h1>
+            </header>
+            <div id='frames'>
+            ${this._slides.map((slide) => {
+        switch (slide.type) {
+        case 'round':
+            return html`<round-frame .title="${this._competitions[slide.competition].category + ' ' + this._competitions[slide.competition].event}"
+                        .round="${slide.round}"
+                        .heats="${slide.heats}"
+                        .recalls=${slide.recalls}
+                        .dances=${this._competitions[slide.competition].dances}
+                        ></round-frame>`;
+        case 'offbeat':
+            return html`<offbeat-frame .title="${slide.title}" .university="${slide.university}"></offbeat-frame>`;
+        default:
+            return html`<dancesport-frame .title="${slide.title}" .body="${slide.body}"></dancesport-frame>`;
+        }
+            })}
+            </div>
+            <footer>
+                ${this._compere ? html`<div>Compère: ${this._compere}</div>`:'' }
+                <div id="nextup">${this._next_event()}</div>
+                ${this._slides[this._current_slide].sponsor ? html`<div>Kindly Sponsored By ${this._slides[this._current_slide].sponsor}</div>`:'' }
+            </footer>
+        `;
     }
 }

@@ -114,6 +114,7 @@ app.get(/university\/(.*)$/, async (req, res) => {
         const university = req.params[0];
         const ret = {
             ...universities[university].basic_information,
+            offbeat: universities[university].offbeat,
             couples: Object.values(full_list.couples).filter(c => c.university === university).map(cpl => {
                 return {
                     ...cpl,
@@ -352,8 +353,8 @@ function combine_full_competition_individual_lists(combined_entries_by_universit
             const ahash = crypto.createHash('sha256');
             const bhash = crypto.createHash('sha256');
 
-            ahash.update(result.couples.length + a.lead + a.follow + a.university + a.events.join(''));
-            bhash.update(result.couples.length + b.lead + b.follow + b.university + b.events.join(''));
+            ahash.update(result.couples.length + a.lead + a.follow + a.university);
+            bhash.update(result.couples.length + b.lead + b.follow + b.university);
 
             return ahash.digest('base64') > bhash.digest('base64') ? 1 : -1;
         }).forEach((couple, i) => {

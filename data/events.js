@@ -170,11 +170,16 @@ const team = {
     'match': {
         category: 'Team',
         event: 'Match',
-        dances: ['Waltz', 'Quickstep', 'Cha-Cha-Cha']
+        dances: ['Waltz', 'Quickstep', 'Cha-Cha-Cha', 'Jive']
+    },
+    'knockout': {
+        category: 'Team',
+        event: 'Knockout',
+        dances: ['Waltz', 'Quickstep', 'Cha-Cha-Cha', 'Jive', 'Tango', 'Rumba']
     }
-}
+};
 
 module.exports = {
     individual,
     team
-}
+};

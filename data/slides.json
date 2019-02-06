@@ -1,7 +1,7 @@
 {
   "event": "Northern Universities Dance Competition",
   "titleslide": "Welcome to Edinburgh! We'll be starting at 10:30am",
-  "sponsors": ["Dancesport Scotland"],
+  "sponsors": ["Dancesport Scotland", "Mine Jas"],
   "compere": "Andrew Thrower",
   "scrutineer": "Ray Bulpitt",
   "music": "Julian SURNAME HERE",
@@ -12,7 +12,26 @@
     "type": "standard",
     "title": "Sponsors",
     "body": "This competition was kindly sponsored by <insert sponsors here>"
-  },{
+  },
+  {
+    "type": "round",
+    "competition": "ocs",
+    "round": 1,
+    "heats": 6
+  },
+  {
+    "type": "round",
+    "competition": "ocs",
+    "round": "Semi-Final",
+    "heats": 3
+  },
+  {
+    "type": "round",
+    "competition": "ocs",
+    "round": "Final",
+    "heats": 1
+  },
+  {
     "type": "round",
     "competition": "bw",
     "round": 1,
@@ -26,8 +45,14 @@
   },
   {
     "type": "round",
+    "competition": "nb",
+    "round": 1,
+    "heats": 3
+  },
+  {
+    "type": "round",
     "competition": "ab",
-    "round": "Final",
+    "round": "Qualifier",
     "heats": 1
   },
   {
@@ -45,12 +70,30 @@
   {
     "type": "round",
     "competition": "nb",
-    "round": 1,
+    "round": 2,
     "heats": 3
   },
   {
+    "type": "round",
+    "competition": "ib",
+    "round": "Final",
+    "heats": 1
+  },
+  {
+    "type": "round",
+    "competition": "ab",
+    "round": "Final",
+    "heats": 1
+  },
+  {
     "type": "offbeat",
-    "title": "Offbeat Competition"
+    "title": "Durham's Greatest Show",
+    "university": "Durham"
+  },
+  {
+    "type": "offbeat",
+    "title": "The Lancaster Gangster Squad",
+    "university": "Lancaster"
   },
   {
     "type": "standard",

@@ -51,7 +51,7 @@ export class RoundFrame extends DancesportFrame {
     <header>
       <h1>${this.title}${this.dances.length!=1 ? html` &mdash; ${this.dances[this._current_dance]}` : ''}</h1>
       <h2>${Number.isInteger(parseInt(this.round, 10)) ? html`Round ${this.round}` : this.round}</h2>
-      ${this.heats != 1 ? html`<h3>Heat ${this._current_heat}</h3>`: ''}
+      ${this.heats != 1 ? html`<h3>Heat ${this._current_heat}/${this.heats}</h3>`: ''}
     </header>
     ${this.recalls ? html`
         <section>
