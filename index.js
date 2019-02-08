@@ -1,7 +1,7 @@
 'use strict';
 const fs = require('fs');
 const hbs = require('handlebars');
-const http = require('http');
+const https = require('https');
 const express = require('express');
 const app = express();
 const crypto = require('crypto');
@@ -423,10 +423,9 @@ app.get('/config', async (req, res) => {
     res.send(config);
 });
 
-app.use(express.static('public'));
+app.use(express.static('/public'));
 
-const server = http.createServer(app);
-
+const server = https.createServer(app);
 
 const io = require('socket.io')(server);
 
