@@ -36,8 +36,8 @@ render_invoice(form_output) {
 }
 
 async function build_index() {
-    const dir_listing = await fs.promises.readdir('entries');
-    const universities = await Promise.all(dir_listing.map(entry => fs.readFile(`entries/${entry}/json/full_save.json`))).then(
+    const dir_listing = await fs.promises.readdir('src/entries');
+    const universities = await Promise.all(dir_listing.map(entry => fs.readFile(`src/entries/${entry}/json/full_save.json`))).then(
         entries => entries.map(entry => JSON.parse(entry)).reduce((object, university) => {
             return {
                 ...object,
