@@ -1,0 +1,27 @@
+<section>
+    <h2>Competitors</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>University</th>
+                <th>Student Status</th>
+                <th>Beginner</th>
+                <th>Alien (Release)</th>
+                <th>Offbeat</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#competitor-row competitors}}<tr>
+                <td>
+                    {{university}}
+                </td>
+                <td>{{name}}</td>
+                <td>{{student_status}}</td>
+                <td>{{#if beginner}}YES{{/if}}</td>
+                <td>{{#if alien}}{{release_from}}{{/if}}</td>
+                <td>{{#if offbeat}}YES{{/if}}</td>
+            </tr>{{/competitor-row}}
+        </tbody>
+    </table>
+</section>

@@ -140,7 +140,7 @@ const individual = {
         'category': 'Open Syllabus',
         'eligibility': 'Open',
         event: 'Ballroom 5-Dance',
-        'dances': ['Waltz', 'Viennese Waltz', 'Tango', 'Foxtrot', 'Quickstep'],
+        'dances': ['Waltz',  'Tango', 'Viennese Waltz', 'Foxtrot', 'Quickstep'],
 
     },
     'osl': {
@@ -167,9 +167,14 @@ const individual = {
 };
 
 const team = {
-    'match': {
-        category: 'Team',
-        event: 'Match',
+    'team2': {
+        category: 'Team Match',
+        event: 'Division 2',
+        dances: ['Waltz', 'Quickstep', 'Cha-Cha-Cha', 'Jive']
+    },
+    'team1': {
+        category: 'Team Match',
+        event: 'Division 1',
         dances: ['Waltz', 'Quickstep', 'Cha-Cha-Cha', 'Jive']
     },
     'knockout': {
@@ -179,7 +184,26 @@ const team = {
     }
 };
 
+const qualifiers = {
+    'aibq': {
+        category: 'Intermediate/Advanced Ballroom',
+        event: 'Qualifier',
+        'dances': ['Waltz', 'Tango', 'Quickstep'],
+    },
+    'ailq': {
+        category: 'Intermediate/Advanced Latin',
+        event: 'Qualifier',
+        'dances': ['Cha-Cha', 'Rumba', 'Jive'],     
+    },
+    'teamq': {
+        category: 'Team Match',
+        event: 'Qualifier',
+        'dances': ['Waltz', 'Quickstep', 'Cha-Cha-Cha', 'Jive', 'Tango', 'Rumba']
+    }
+};
+
 module.exports = {
     individual,
-    team
+    team,
+    qualifiers
 };

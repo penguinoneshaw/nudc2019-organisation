@@ -8,7 +8,7 @@ const production = !process.env.ROLLUP_WATCH;
 module.exports = {
     input: './framework/index.js',
     output: {
-        file: 'static/framework.bundle.js',
+        file: 'public/framework.bundle.js',
         format: 'esm'
     },
     plugins: [

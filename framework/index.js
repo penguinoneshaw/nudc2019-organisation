@@ -17,6 +17,10 @@ socket.on('current-slide', (evt) => {
     frameholder.slide = evt;
 });
 
+socket.on('reconnect', (evt) => {
+    frameholder.updateConfig();
+});
+
 document.addEventListener('slide-changed', (evt) => {
     socket.emit('slide-changed', evt.detail.slide);
 });

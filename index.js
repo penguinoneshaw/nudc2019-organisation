@@ -7,10 +7,10 @@ const app = express();
 const crypto = require('crypto');
 
 const {
-    individual, team
+    individual, team, qualifiers
 } = require('./data/events');
 
-const config = {...require('./data/slides.json'), 'competitions': {...individual, ...team}};
+const config = {...require('./data/slides.json'), 'competitions': {...individual, ...team, ...qualifiers}};
 
 fs.readFile = fs.promises.readFile;
 let base_template_promise = fs.readFile('handlebars_templates/template.hbs').then(template => hbs.compile(template.toString('utf-8')));
@@ -20,6 +20,8 @@ let index_promise = fs.readFile('handlebars_templates/index.hbs').then(template 
 let university_index_promise = fs.readFile('handlebars_templates/university_index.hbs').then(template => hbs.compile(template.toString('utf-8')));
 let event_index_promise = fs.readFile('handlebars_templates/event_index.hbs').then(template => hbs.compile(template.toString('utf-8')));
 const presentation_template = fs.readFile('framework/index.hbs').then(template => hbs.compile(template.toString('utf-8')));
+const competitor_list_template = fs.readFile('handlebars_templates/competitor_list.hbs').then(template => hbs.compile(template.toString('utf-8')));
+
 
 
 async function
@@ -93,6 +95,21 @@ app.get(/university\/(.*)\/invoice$/, async (req, res) => {
         } = await combined_universities;
         const content = await render_invoice(universities[decodeURIComponent(req.params[0])]);
         const in_context = await base_template_promise.then(template => template(content));
+        res.set({
+            'Content-Type': 'text/html'
+        });
+        res.send(in_context);
+    } catch (_) {
+        res.sendStatus(404);
+    }
+});
+
+app.get(/competitors$/, async (req, res) => {
+    try {
+        const {
+            full_list
+        } = await combined_universities;
+        const in_context = await competitor_list_template.then(template => template(full_list));
         res.set({
             'Content-Type': 'text/html'
         });
@@ -404,7 +421,7 @@ app.get('/config', async (req, res) => {
     res.send(config);
 });
 
-app.use(express.static('static'));
+app.use(express.static('public'));
 
 const server = http.createServer(app);
 
@@ -415,9 +432,11 @@ let current_slide = [0,0];
 io.on('connection', (socket) => {
     socket.on('slide-changed', (slide)=>{
         current_slide = slide;
-        socket.broadcast.emit('current-slide', slide);
+        socket.broadcast.emit('current-slide', current_slide);
     });
-    socket.emit('current-slide', current_slide);
+    socket.on('reconnect', ()=>{
+        socket.emit('current-slide', current_slide);
+    });
 });
 
 server.listen(8081);

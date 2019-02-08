@@ -49,7 +49,7 @@ export class RoundFrame extends DancesportFrame {
     render() {
         return html `
     <header>
-      <h1>${this.title}${this.dances.length!=1 ? html` &mdash; ${this.dances[this._current_dance]}` : ''}</h1>
+      <h1>${this.title}${this.dances.length > 1 ? html` &mdash; ${this.dances[this._current_dance]}` : ''}</h1>
       <h2>${Number.isInteger(parseInt(this.round, 10)) ? html`Round ${this.round}` : this.round}</h2>
       ${this.heats != 1 ? html`<h3>Heat ${this._current_heat}/${this.heats}</h3>`: ''}
     </header>
@@ -71,14 +71,14 @@ export class RoundFrame extends DancesportFrame {
     }
 
     set dance(d) {
-        if (d >= this.dances.length || d < 0) throw new Error('Invalid Dance Number' + d);
+        if (d >= (this.dances).length || d < 0) throw new Error('Invalid Dance Number' + d);
         this._current_dance = d;
         return d;
     }
 
     set subframe(n) {
         if (Array.isArray(n)) n = n[0];
-        if (n >= this.dances.length * this.heats) return new Error('Invalid Heat Number' + n);
+        if (n >= (this.dances).length * this.heats) return new Error('Invalid Heat Number' + n);
         this.dance = Math.floor(n / this.heats);
         this.heat = (n % this.heats) + 1;
     }
@@ -88,7 +88,7 @@ export class RoundFrame extends DancesportFrame {
     }
 
     nextSubframe() {
-        if (this.subframe + 1 == this.heats * this.dances.length) return false;
+        if (this.subframe + 1 >= this.heats * this.dances.length) return false;
         this.subframe = this.subframe + 1;
         return true;
     }
