@@ -10,9 +10,9 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "express": "^4.16.4",
-    "handlebars": "^4.0.12",
-    "sanitize-filename": "^1.6.1",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.2",
+    "sanitize-filename": "^1.6.3",
     "lit-element": "^2.2.1",
     "normalize.css": "^8.0.1",
     "socket.io": "^2.3.0"
