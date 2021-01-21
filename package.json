@@ -15,7 +15,7 @@
     "sanitize-filename": "^1.6.3",
     "lit-element": "^2.2.1",
     "normalize.css": "^8.0.1",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
