@@ -1,4 +1,4 @@
-import { LitElement, css, html } from "lit-element";
+import { LitElement, css, html } from "lit";
 
 export class DancesportFrameholder extends LitElement {
   static get styles() {

@@ -74,6 +74,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lit/reactive-element@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "@lit/reactive-element@npm:1.0.2"
+  checksum: 105fd68b5fb23dec75ea0e273ebbe94272639db4f8a41a4764eef7c9c172ac498c6c4a658d8e9b20006dc543f86a7d0061267f84096dbf980c300b79bd5adcf2
+  languageName: node
+  linkType: hard
+
 "@npmcli/fs@npm:^1.0.0":
   version: 1.0.0
   resolution: "@npmcli/fs@npm:1.0.0"
@@ -168,6 +175,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/handlebars@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@types/handlebars@npm:4.1.0"
+  dependencies:
+    handlebars: "*"
+  checksum: 536d9f690c93f5d13fcc4a37ae7dd11f41eb73c47416d56f51623aedc3b573ad9775d6618ede75d7bf9148ac75694e50f8e6ba5773de7d9f040811368c73739f
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*":
   version: 16.11.7
   resolution: "@types/node@npm:16.11.7"
@@ -181,6 +197,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: dc6a6df507656004e242dcb02c784479deca516d5f4b58a1707e708022b269ae147e1da0521f3e8ad0d63638869d87e0adc023f0bd5454aa6f72ac66c7525cf5
+  languageName: node
+  linkType: hard
+
+"@types/trusted-types@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@types/trusted-types@npm:2.0.2"
+  checksum: 3371eef5f1c50e1c3c07a127c1207b262ba65b83dd167a1c460fc1b135a3fb0c97b9f508efebd383f239cc5dd5b7169093686a692a501fde9c3f7208657d9b0d
   languageName: node
   linkType: hard
 
@@ -1584,7 +1607,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"handlebars@npm:^4.7.2":
+"handlebars@npm:*, handlebars@npm:^4.7.2":
   version: 4.7.7
   resolution: "handlebars@npm:4.7.7"
   dependencies:
@@ -1838,11 +1861,12 @@ __metadata:
   dependencies:
     "@rollup/plugin-commonjs": ^21.0.1
     "@rollup/plugin-node-resolve": ^13.0.6
+    "@types/handlebars": ^4.1.0
     eslint: ^8.2.0
     eslint-config-prettier: ^8.3.0
     express: ^4.17.1
     handlebars: ^4.7.2
-    lit-element: ^2.2.1
+    lit: ^2.0.2
     normalize.css: ^8.0.1
     postcss: ^8.3.11
     prettier: ^2.4.1
@@ -2055,19 +2079,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit-element@npm:^2.2.1":
-  version: 2.5.1
-  resolution: "lit-element@npm:2.5.1"
+"lit-element@npm:^3.0.0":
+  version: 3.0.2
+  resolution: "lit-element@npm:3.0.2"
   dependencies:
-    lit-html: ^1.1.1
-  checksum: c4f45d0cc84d49cc9dca2502b5e0bd14289c46a5ee331c21fb0014693541a4824887f8c2c6725310d380d713adecbe31fba1eda6f8aabc14927f524d6527f6c9
+    "@lit/reactive-element": ^1.0.0
+    lit-html: ^2.0.0
+  checksum: 7d7ffa7ce6f524eabd540181b52c2663686d53e9cc5593af0a3f72740f526091265d209779f4bae5f8da4d1850fe1ebf9e8d337cc54108d1a1c54feca6337c3c
   languageName: node
   linkType: hard
 
-"lit-html@npm:^1.1.1":
-  version: 1.4.1
-  resolution: "lit-html@npm:1.4.1"
-  checksum: 6e1bb335cd8493700d2f1eaf1e019c2f6bf78ac641bdba5e2ff9f1545430e0fec15c6721ee1c8ca75559e1d52a1d34cdc568da46319681304299d9aff83a6346
+"lit-html@npm:^2.0.0":
+  version: 2.0.2
+  resolution: "lit-html@npm:2.0.2"
+  dependencies:
+    "@types/trusted-types": ^2.0.2
+  checksum: e709e863dabbfb2a21b773dc17a6071b0cfeb683b4fda0f78b979cb60038dfa7057ca4cb48314915e638f4d1eefce40a22de438518fbb71a0a08d6ef150830c9
+  languageName: node
+  linkType: hard
+
+"lit@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "lit@npm:2.0.2"
+  dependencies:
+    "@lit/reactive-element": ^1.0.0
+    lit-element: ^3.0.0
+    lit-html: ^2.0.0
+  checksum: 52a04b25164da1683c7295b305087794f175165cd1561e03f0c50ae998823f0e26101c82add05dea773e35472fbe3ed84486a4685294897f588d126fe8419e05
   languageName: node
   linkType: hard
 
