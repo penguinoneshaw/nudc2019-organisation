@@ -5,482 +5,486 @@
   "compere": "Ann Applegarth",
   "scrutineer": "Ray Bulpitt",
   "music": "Julian Brunskill",
-  "slides": [{
-    "type": "standard",
-    "title": "Welcome to Edinburgh!"
+  "slides": [
+    {
+      "type": "standard",
+      "title": "Welcome to Edinburgh!"
     },
-  {
-    "type": "standard",
-    "title": "Introduction of Adjudicators"
-  },
-  {
-    "type": "round",
-    "competition": "ocs",
-    "round": 1,
-    "heats": 4
-  },
-  {
-    "type": "round",
-    "competition": "bw",
-    "round": 1,
-    "heats": 3
-  },
-  {
-    "type": "round",
-    "competition": "bq",
-    "round": 1,
-    "heats": 3
-  },
-  {
-    "type": "round",
-    "competition": "nb",
-    "round": 1,
-    "heats": 3
-  },
-  {
-    "type": "round",
-    "competition": "ocs",
-    "round": 2,
-    "heats": 3
-  },
-  {
-    "type": "round",
-    "competition": "osb",
-    "round": 1,
-    "heats": 3
-  },
-  {
-    "type": "round",
-    "competition": "bw",
-    "round": 2,
-    "heats": 2
-  },
-  {
-    "type": "round",
-    "competition": "bq",
-    "round": 2,
-    "heats": 2
-  },
-  {
-    "type": "round",
-    "competition": "ocs",
-    "round": 3,
-    "heats": 2
-  },
-  {
-    "type": "round",
-    "competition": "aibq",
-    "round": "",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "nb",
-    "round": 2,
-    "heats": 2
-  },
-  {
-    "type": "round",
-    "competition": "osb",
-    "round": 2,
-    "heats": 2
-  },
-  {
-    "type":"standard",
-    "title":"General Dancing"
-  },
-  {
-    "type": "round",
-    "competition": "bw",
-    "round": "Semi-Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "bq",
-    "round": "Semi-Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "ssb",
-    "round": 1,
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "esnb",
-    "round": 1,
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "nb",
-    "round": "Semi-Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "esob",
-    "round": 1,
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "ib",
-    "round": 1,
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "ocs",
-    "round": "Semi-Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "osb",
-    "round": "Semi-Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "bw",
-    "round": "Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "bq",
-    "round": "Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "ssb",
-    "round": "Final",
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "ib",
-    "round": "Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "esnb",
-    "round": "Final",
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "nb",
-    "round": "Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "esob",
-    "round": "Final",
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "ab",
-    "round": "Final",
-    "heats": 1
-  },   
-  {
-    "type": "round",
-    "competition": "ocs",
-    "round": "Final",
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "osb",
-    "round": "Final",
-    "heats": 1
-  }, 
-  {
-    "type": "standard",
-    "title": "Team Knockout"
-  },
-  {
-    "type": "standard",
-    "title": "Sequence and Modern Ballroom Presentations"
-  },
-  {
-    "type": "standard",
-    "title": "Lunch"
-  },
-  {
-    "type": "round",
-    "competition": "onarr",
-    "round": "Semi-Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "oarr",
-    "round": "Warm Up",
-    "heats": 1
-  },  {
-    "type": "round",
-    "competition": "onarr",
-    "round": "Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "oarr",
-    "round": "Final",
-    "heats": 1
-  },
-  {
-    "type":"standard",
-    "title":"General Dancing"
-  },
-  {
-    "type": "round",
-    "competition": "bc",
-    "round": 1,
-    "heats": 3
-  },
-  {
-    "type": "round",
-    "competition": "bj",
-    "round": 1,
-    "heats": 3
-  },
-  {
-    "type": "round",
-    "competition": "nl",
-    "round": 1,
-    "heats": 3
-  },
-  {
-    "type": "round",
-    "competition": "osl",
-    "round": 1,
-    "heats": 3
-  },   {
-    "type": "round",
-    "competition": "bc",
-    "round": 2,
-    "heats": 2
-  },
-  {
-    "type": "round",
-    "competition": "bj",
-    "round": 2,
-    "heats": 2
-  },
-  {
-    "type": "round",
-    "competition": "ailq",
-    "heats": 1,
-    "round": ""
-  },  {
-    "type": "round",
-    "competition": "nl",
-    "round": 2,
-    "heats": 2
-  },
-  {
-    "type": "round",
-    "competition": "osl",
-    "round": 2,
-    "heats": 2
-  }, 
-  {
-    "type":"standard",
-    "title":"General Dancing"
-  },
-  {
-    "type": "round",
-    "competition": "bc",
-    "round": "Semi-Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "bj",
-    "round": "Semi-Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "esnl",
-    "round": "Semi-Final",
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "nl",
-    "round": "Semi-Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "esol",
-    "round": "Semi-Final",
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "il",
-    "round": 1,
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "ssl",
-    "round": 1,
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "osl",
-    "round": "Semi-Final",
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "bc",
-    "round": "Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "bj",
-    "round": "Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "esnl",
-    "round": "Final",
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "nl",
-    "round": "Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "esol",
-    "round": "Final",
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "il",
-    "round": "Final",
-    "heats": 1
-  },
-  {
-    "type": "round",
-    "competition": "al",
-    "round": "Final",
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "ssl",
-    "round": "Final",
-    "heats": 1
-  }, 
-  {
-    "type": "round",
-    "competition": "osl",
-    "round": "Final",
-    "heats": 1
-  }, 
-  {
-    "type": "standard",
-    "title": "General Dancing"
-  },
-  {
-    "type": "offbeat",
-    "title": "Durham's Greatest Show",
-    "university": "Durham"
-  },
-  {
-    "type": "offbeat",
-    "title": "The Lancaster Gangster Squad",
-    "university": "Lancaster"
-  },
-  {
-    "type": "offbeat",
-    "title": "A Scottish Medley",
-    "university": "Edinburgh"
-  },
-  {
-    "type": "offbeat",
-    "title": "Please Come Home",
-    "university": "Warwick"
-  },
-  {
-    "type": "offbeat",
-    "title": "Expecto Patronotts",
-    "university": "Nottingham"
-  },
-  {
-    "type": "standard",
-    "title": "Presentation of Latin American, Rock 'n' Roll & Offbeat Prizes"
-  },
-  {
-    "type": "standard",
-    "title": "Ceilidh"
-  },
-  {
-    "type": "standard",
-    "title": "Team Walk On"
-  },
-  {
-    "type": "round",
-    "competition": "teamq",
-    "heats": 2
-  },
-  {
-    "type": "round",
-    "competition": "team2",
-    "heats": 1,
-    "round":"Semi-Final"
-  },
-  {
-    "type": "round",
-    "competition": "team1",
-    "heats": 1,
-    "round":"Semi-Final"
-  },
-  {
-    "type": "round",
-    "competition": "team2",
-    "heats": 1,
-    "round":"Final"
-  },
-  {
-    "type": "round",
-    "competition": "team1",
-    "heats": 1,
-    "round":"Final"
-  },
-  {
-    "type": "standard",
-    "title": "Group Fun Dance"
-  },
-  {
-    "type": "standard",
-    "title": "Team Presentation"
-  },  
-  {
-    "type": "standard",
-    "title": "Last Waltz & Auld Lang Syne"
-  }
-]
+    {
+      "type": "standard",
+      "title": "Introduction of Adjudicators"
+    },
+    {
+      "type": "round",
+      "competition": "ocs",
+      "round": 1,
+      "heats": 4
+    },
+    {
+      "type": "round",
+      "competition": "bw",
+      "round": 1,
+      "heats": 3
+    },
+    {
+      "type": "round",
+      "competition": "bq",
+      "round": 1,
+      "heats": 3
+    },
+    {
+      "type": "round",
+      "competition": "nb",
+      "round": 1,
+      "heats": 3
+    },
+    {
+      "type": "round",
+      "competition": "ocs",
+      "round": 2,
+      "heats": 3
+    },
+    {
+      "type": "round",
+      "competition": "osb",
+      "round": 1,
+      "heats": 3
+    },
+    {
+      "type": "round",
+      "competition": "bw",
+      "round": 2,
+      "heats": 2
+    },
+    {
+      "type": "round",
+      "competition": "bq",
+      "round": 2,
+      "heats": 2
+    },
+    {
+      "type": "round",
+      "competition": "ocs",
+      "round": 3,
+      "heats": 2
+    },
+    {
+      "type": "round",
+      "competition": "aibq",
+      "round": "",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "nb",
+      "round": 2,
+      "heats": 2
+    },
+    {
+      "type": "round",
+      "competition": "osb",
+      "round": 2,
+      "heats": 2
+    },
+    {
+      "type": "standard",
+      "title": "General Dancing"
+    },
+    {
+      "type": "round",
+      "competition": "bw",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "bq",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "ssb",
+      "round": 1,
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "esnb",
+      "round": 1,
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "nb",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "esob",
+      "round": 1,
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "ib",
+      "round": 1,
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "ocs",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "osb",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "bw",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "bq",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "ssb",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "ib",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "esnb",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "nb",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "esob",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "ab",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "ocs",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "osb",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "standard",
+      "title": "Team Knockout"
+    },
+    {
+      "type": "standard",
+      "title": "Sequence and Modern Ballroom Presentations"
+    },
+    {
+      "type": "standard",
+      "title": "Lunch"
+    },
+    {
+      "type": "round",
+      "competition": "onarr",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "oarr",
+      "round": "Warm Up",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "onarr",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "oarr",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "standard",
+      "title": "General Dancing"
+    },
+    {
+      "type": "round",
+      "competition": "bc",
+      "round": 1,
+      "heats": 3
+    },
+    {
+      "type": "round",
+      "competition": "bj",
+      "round": 1,
+      "heats": 3
+    },
+    {
+      "type": "round",
+      "competition": "nl",
+      "round": 1,
+      "heats": 3
+    },
+    {
+      "type": "round",
+      "competition": "osl",
+      "round": 1,
+      "heats": 3
+    },
+    {
+      "type": "round",
+      "competition": "bc",
+      "round": 2,
+      "heats": 2
+    },
+    {
+      "type": "round",
+      "competition": "bj",
+      "round": 2,
+      "heats": 2
+    },
+    {
+      "type": "round",
+      "competition": "ailq",
+      "heats": 1,
+      "round": ""
+    },
+    {
+      "type": "round",
+      "competition": "nl",
+      "round": 2,
+      "heats": 2
+    },
+    {
+      "type": "round",
+      "competition": "osl",
+      "round": 2,
+      "heats": 2
+    },
+    {
+      "type": "standard",
+      "title": "General Dancing"
+    },
+    {
+      "type": "round",
+      "competition": "bc",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "bj",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "esnl",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "nl",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "esol",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "il",
+      "round": 1,
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "ssl",
+      "round": 1,
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "osl",
+      "round": "Semi-Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "bc",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "bj",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "esnl",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "nl",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "esol",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "il",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "al",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "ssl",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "round",
+      "competition": "osl",
+      "round": "Final",
+      "heats": 1
+    },
+    {
+      "type": "standard",
+      "title": "General Dancing"
+    },
+    {
+      "type": "offbeat",
+      "title": "Durham's Greatest Show",
+      "university": "Durham"
+    },
+    {
+      "type": "offbeat",
+      "title": "The Lancaster Gangster Squad",
+      "university": "Lancaster"
+    },
+    {
+      "type": "offbeat",
+      "title": "A Scottish Medley",
+      "university": "Edinburgh"
+    },
+    {
+      "type": "offbeat",
+      "title": "Please Come Home",
+      "university": "Warwick"
+    },
+    {
+      "type": "offbeat",
+      "title": "Expecto Patronotts",
+      "university": "Nottingham"
+    },
+    {
+      "type": "standard",
+      "title": "Presentation of Latin American, Rock 'n' Roll & Offbeat Prizes"
+    },
+    {
+      "type": "standard",
+      "title": "Ceilidh"
+    },
+    {
+      "type": "standard",
+      "title": "Team Walk On"
+    },
+    {
+      "type": "round",
+      "competition": "teamq",
+      "heats": 2
+    },
+    {
+      "type": "round",
+      "competition": "team2",
+      "heats": 1,
+      "round": "Semi-Final"
+    },
+    {
+      "type": "round",
+      "competition": "team1",
+      "heats": 1,
+      "round": "Semi-Final"
+    },
+    {
+      "type": "round",
+      "competition": "team2",
+      "heats": 1,
+      "round": "Final"
+    },
+    {
+      "type": "round",
+      "competition": "team1",
+      "heats": 1,
+      "round": "Final"
+    },
+    {
+      "type": "standard",
+      "title": "Group Fun Dance"
+    },
+    {
+      "type": "standard",
+      "title": "Team Presentation"
+    },
+    {
+      "type": "standard",
+      "title": "Last Waltz & Auld Lang Syne"
+    }
+  ]
 }

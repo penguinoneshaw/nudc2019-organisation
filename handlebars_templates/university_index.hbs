@@ -1,45 +1,47 @@
 <section>
-    <h1>{{university}}</h1>
-    <h2>Summary</h2>
-    <dl>
-        <dt>Team Captain(s)</dt>
-        <dd>{{team_captain}} &lt;{{tc_email}}&gt;</dd>
-        <dt>Coach(es)</dt>
-        <dd>{{coaches_names}}</dd>
-        {{#if offbeat}}<dd>Offbeat</dd><dt>TRUE</dt>{{/if}}
-    </dl>
+  <h1>{{university}}</h1>
+  <h2>Summary</h2>
+  <dl>
+    <dt>Team Captain(s)</dt>
+    <dd>{{team_captain}} &lt;{{tc_email}}&gt;</dd>
+    <dt>Coach(es)</dt>
+    <dd>{{coaches_names}}</dd>
+    {{#if offbeat}}<dd>Offbeat</dd><dt>TRUE</dt>{{/if}}
+  </dl>
 </section>
 <section>
-    <h2>Competitors</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Student Status</th>
-                <th>Beginner</th>
-                <th>Alien (Release)</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#competitor-row competitors}}<tr>
-                <td>{{name}}</td>
-                <td>{{student_status}}</td>
-                <td>{{#if beginner}}YES{{/if}}</td>
-                <td>{{#if alien}}{{release_from}}{{/if}}</td>
-            </tr>{{/competitor-row}}
-        </tbody>
-    </table>
+  <h2>Competitors</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Student Status</th>
+        <th>Beginner</th>
+        <th>Alien (Release)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#competitor-row competitors}}<tr>
+          <td>{{name}}</td>
+          <td>{{student_status}}</td>
+          <td>{{#if beginner}}YES{{/if}}</td>
+          <td>{{#if alien}}{{release_from}}{{/if}}</td>
+        </tr>{{/competitor-row}}
+    </tbody>
+  </table>
 </section>
 <section>
-    <h1>Couples</h1>
-    <table>
-        <thead>
-            <tr>
-                <th></th><th>Lead</th><th>Follow</th><th>Events</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#couple-row couples}}<tr><td>{{comp_couple_id}}</td><td>{{lead.name}}</td><td>{{follow.name}}</td><td>{{events}}</td></tr>{{/couple-row}}
-        </tbody>
-    </table>
+  <h1>Couples</h1>
+  <table>
+    <thead>
+      <tr>
+        <th></th><th>Lead</th><th>Follow</th><th>Events</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#couple-row couples}}<tr><td>{{comp_couple_id}}</td><td
+          >{{lead.name}}</td><td>{{follow.name}}</td><td
+          >{{events}}</td></tr>{{/couple-row}}
+    </tbody>
+  </table>
 </section>

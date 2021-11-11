@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab");
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -86,12 +86,12 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -106,41 +106,40 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
+  content: "";
+  content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* OWN STYLES START HERE */
 
-
 p {
-    margin-bottom: 1.25em;
+  margin-bottom: 1.25em;
 }
 
 h1,
@@ -148,52 +147,52 @@ h2,
 h3,
 h4,
 h5 {
-    margin: 2.75rem 0 1rem;
+  margin: 2.75rem 0 1rem;
 }
 
 h1 {
-    margin-top: 0;
-    font-size: 2.488em;
+  margin-top: 0;
+  font-size: 2.488em;
 }
 
 h2 {
-    font-size: 2.074em;
+  font-size: 2.074em;
 }
 
 h3 {
-    font-size: 1.728em;
+  font-size: 1.728em;
 }
 
 h4 {
-    font-size: 1.44em;
+  font-size: 1.44em;
 }
 
 h5 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 small,
 .text_small {
-    font-size: 0.833em;
+  font-size: 0.833em;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    background-color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    line-height: 1.45;
-    color: #000;
-    display: grid;
-    grid-template: "h h h"min-content "b c d"auto / auto 180mm auto;
-    row-gap: 3ex;
-    --app-primary-color: #004205;
-    --app-secondary-color: #5c366a;
-    --app-secondary-darker: #2a1930;
-    min-height: 100vh;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #000;
+  display: grid;
+  grid-template: "h h h" min-content "b c d" auto / auto 180mm auto;
+  row-gap: 3ex;
+  --app-primary-color: #004205;
+  --app-secondary-color: #5c366a;
+  --app-secondary-darker: #2a1930;
+  min-height: 100vh;
 }
 
 h1,
@@ -201,131 +200,127 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Roboto Slab', 'Palatino Linotype', 'Palatino', serif;
-    font-weight: 400;
-    line-height: 1.15;
+  font-family: "Roboto Slab", "Palatino Linotype", "Palatino", serif;
+  font-weight: 400;
+  line-height: 1.15;
 }
 
 header h1 {
-    margin-top: 2ex;
-    font-size: 2em;
-    text-shadow: var(--app-secondary-darker) 0 0 10px;
+  margin-top: 2ex;
+  font-size: 2em;
+  text-shadow: var(--app-secondary-darker) 0 0 10px;
 }
 
 header h2 {
-    font-size: 1.8em;
-    margin: 1ex 0 2ex 0
+  font-size: 1.8em;
+  margin: 1ex 0 2ex 0;
 }
 
 header small,
 header .text_small {
-    font-size: 0.889em;
+  font-size: 0.889em;
 }
 
 header {
-    background: var(--app-secondary-color);
-    color: white;
-    text-align: center;
-    grid-area: h;
-    position: relative;
-    padding: 2ex 0;
+  background: var(--app-secondary-color);
+  color: white;
+  text-align: center;
+  grid-area: h;
+  position: relative;
+  padding: 2ex 0;
 }
 
 header a {
-    color: inherit;
-    text-decoration: none;
-    
+  color: inherit;
+  text-decoration: none;
 }
 
 .container > section {
-    position: relative;
+  position: relative;
 }
 
 .container > section:not(:nth-of-type(1)) {
-    margin-top: 5ex;
+  margin-top: 5ex;
 }
 
-body::after{
-    content: '';
-    background: url(logo.svg) no-repeat center center;
-    position: fixed;
-    background-size: 80%;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    left: 0;
-    opacity: 0.1;
-    z-index: -1;
-
+body::after {
+  content: "";
+  background: url(logo.svg) no-repeat center center;
+  position: fixed;
+  background-size: 80%;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.1;
+  z-index: -1;
 }
-
 
 .container {
-    position: relative;
-    grid-area: c
+  position: relative;
+  grid-area: c;
 }
 
-
 .box {
-    width: 40%;
-    border: var(--app-primary-color) thin solid;
-    background-color: white;
+  width: 40%;
+  border: var(--app-primary-color) thin solid;
+  background-color: white;
 }
 
 .box blockquote {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .box h1 {
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .box header {
-    background: var(--app-primary-color);
+  background: var(--app-primary-color);
 }
 
 .box section {
-    padding: 1ex 1.5em;
+  padding: 1ex 1.5em;
 }
 .boxes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    justify-items: center;
-    align-content: space-around
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-items: center;
+  align-content: space-around;
 }
 
 .container > section:not(:nth-of-type(1)) {
-    page-break-before: always
+  page-break-before: always;
 }
 
 table {
-    width: 100%;
-    border-bottom: var(--app-primary-color) thick solid;
-    background: rgba(255,255,255,0.8)
+  width: 100%;
+  border-bottom: var(--app-primary-color) thick solid;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 th {
-    background: var(--app-primary-color);
-    padding: 1ex 2em;
-    color: white;
-    font-weight: bold
+  background: var(--app-primary-color);
+  padding: 1ex 2em;
+  color: white;
+  font-weight: bold;
 }
 
 td {
-    padding: 1em 1ex
+  padding: 1em 1ex;
 }
 
 td:not(:nth-of-type(1)) {
-    text-align: center;
+  text-align: center;
 }
 
 tfoot {
-    border-top: var(--app-primary-color) double thick;
+  border-top: var(--app-primary-color) double thick;
 }
 
 tr:not(:last-of-type) {
-    border-bottom: var(--app-primary-color) solid thin;
+  border-bottom: var(--app-primary-color) solid thin;
 }

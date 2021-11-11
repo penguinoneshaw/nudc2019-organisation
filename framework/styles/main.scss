@@ -1,4 +1,3 @@
-
 body {
   --app-primary-color: #004205;
   --app-secondary-color: #5c366a;
@@ -6,14 +5,13 @@ body {
   --app-contrast-primary-color: white;
   --app-contrast-primary-color: white;
 
-  --body-fonts: 'Roboto', 'Segoe UI', 'Tahoma', 'Geneva', Verdana, sans-serif;
-  --header-fonts: 'Roboto Slab', 'Palatino Linotype', 'Palatino', serif;
+  --body-fonts: "Roboto", "Segoe UI", "Tahoma", "Geneva", Verdana, sans-serif;
+  --header-fonts: "Roboto Slab", "Palatino Linotype", "Palatino", serif;
   width: 100vw;
   height: 100vh;
   position: relative;
 }
 
-
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }

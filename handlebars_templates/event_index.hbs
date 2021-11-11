@@ -1,13 +1,15 @@
 <section>
-    <h1>{{category}} {{event}}</h1>
-    <table>
-        <thead>
-            <tr>
-                <th></th><th>Lead</th><th>Follow</th><th>University</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#couple-row event_couples}}<tr><td>{{comp_couple_id}}</td><td>{{lead.name}}</td><td>{{follow.name}}</td><td>{{university}}</td></tr>{{/couple-row}}
-        </tbody>
-    </table>
+  <h1>{{category}} {{event}}</h1>
+  <table>
+    <thead>
+      <tr>
+        <th></th><th>Lead</th><th>Follow</th><th>University</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#couple-row event_couples}}<tr><td>{{comp_couple_id}}</td><td
+          >{{lead.name}}</td><td>{{follow.name}}</td><td
+          >{{university}}</td></tr>{{/couple-row}}
+    </tbody>
+  </table>
 </section>

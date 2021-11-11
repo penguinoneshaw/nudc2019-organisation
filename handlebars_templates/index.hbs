@@ -1,40 +1,48 @@
 <section>
-    <h1>Summary</h1>
-    <h2>Entries by University</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>University</th><th>Number of Competitors</th><th>Number of Couples</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#university-row universities}}<tr><td><a href="{{link}}">{{university}}</a></td><td>{{competitors_length}}</td><td>{{couples_length}}</td></tr>{{/university-row}}
-        </tbody>
-    </table>
+  <h1>Summary</h1>
+  <h2>Entries by University</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>University</th><th>Number of Competitors</th><th>Number of Couples</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#university-row universities}}<tr><td><a
+              href="{{link}}"
+            >{{university}}</a></td><td>{{competitors_length}}</td><td
+          >{{couples_length}}</td></tr>{{/university-row}}
+    </tbody>
+  </table>
 </section>
 <section>
-    <h1>Couples</h1>
-        <table>
-        <thead>
-            <tr>
-                <th></th><th>University</th><th>Lead</th><th>Follow</th><th>Events</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#all-couples-row full_list}}<tr><td>{{comp_couple_id}}</td><td>{{university}}</td><td>{{lead.name}}</td><td>{{follow.name}}</td><td>{{events}}</td></tr>{{/all-couples-row}}
-        </tbody>
-    </table>
+  <h1>Couples</h1>
+  <table>
+    <thead>
+      <tr>
+        <th></th><th>University</th><th>Lead</th><th>Follow</th><th>Events</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#all-couples-row full_list}}<tr><td>{{comp_couple_id}}</td><td
+          >{{university}}</td><td>{{lead.name}}</td><td>{{follow.name}}</td><td
+          >{{events}}</td></tr>{{/all-couples-row}}
+    </tbody>
+  </table>
 </section>
 <section>
-    <h1>Events</h1>
-        <table>
-        <thead>
-            <tr>
-                <th>Event</th><th>Number of Competing Couples</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#all-events-row full_list}}<tr><td><a href="/event/{{event.id}}">{{event.category}} {{event.event}}</a></td><td>{{event_couples.length}}</td></tr>{{/all-events-row}}
-        </tbody>
-    </table>
+  <h1>Events</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Event</th><th>Number of Competing Couples</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#all-events-row full_list}}<tr><td><a
+              href="/event/{{event.id}}"
+            >{{event.category}} {{event.event}}</a></td><td
+          >{{event_couples.length}}</td></tr>{{/all-events-row}}
+    </tbody>
+  </table>
 </section>

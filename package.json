@@ -12,18 +12,22 @@
   "dependencies": {
     "express": "^4.17.1",
     "handlebars": "^4.7.2",
-    "sanitize-filename": "^1.6.3",
     "lit-element": "^2.2.1",
     "normalize.css": "^8.0.1",
+    "sanitize-filename": "^1.6.3",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
-    "eslint": "^5.13.0",
-    "node-sass": "^4.13.1",
-    "rollup": "^1.29.1",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-postcss": "^2.0.4",
-    "rollup-plugin-terser": "^5.2.0"
-  }
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "postcss": "^8.3.11",
+    "prettier": "^2.4.1",
+    "rollup": "^2.59.0",
+    "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.43.4"
+  },
+  "packageManager": "yarn@3.1.0"
 }
