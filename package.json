@@ -10,7 +10,7 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "handlebars": "^4.7.2",
     "lit": "^2.0.2",
     "normalize.css": "^8.0.1",
